@@ -1,8 +1,8 @@
 {
-  "homepage": "https://codedevbrad.github.io/svg_morph_glitch_effects",
   "name": "client",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://codedevbrad.github.io/svg_morph_glitch_effects",
   "dependencies": {
     "@codedevbrad/react_movement": "^2.7.0",
     "animejs": "^3.1.0",
