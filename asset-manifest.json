@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/svg_morphing/static/css/main.e3c6ce57.chunk.css",
-    "main.js": "/svg_morphing/static/js/main.4245ef7d.chunk.js",
-    "main.js.map": "/svg_morphing/static/js/main.4245ef7d.chunk.js.map",
-    "runtime~main.js": "/svg_morphing/static/js/runtime~main.d1b1cbab.js",
-    "runtime~main.js.map": "/svg_morphing/static/js/runtime~main.d1b1cbab.js.map",
-    "static/js/2.9b29738c.chunk.js": "/svg_morphing/static/js/2.9b29738c.chunk.js",
-    "static/js/2.9b29738c.chunk.js.map": "/svg_morphing/static/js/2.9b29738c.chunk.js.map",
-    "index.html": "/svg_morphing/index.html",
-    "precache-manifest.1be34659f99de69c79a4bf9bf67e0920.js": "/svg_morphing/precache-manifest.1be34659f99de69c79a4bf9bf67e0920.js",
-    "service-worker.js": "/svg_morphing/service-worker.js",
-    "static/css/main.e3c6ce57.chunk.css.map": "/svg_morphing/static/css/main.e3c6ce57.chunk.css.map"
+    "main.css": "/svg_morph_glitch_effects/static/css/main.e3c6ce57.chunk.css",
+    "main.js": "/svg_morph_glitch_effects/static/js/main.4245ef7d.chunk.js",
+    "main.js.map": "/svg_morph_glitch_effects/static/js/main.4245ef7d.chunk.js.map",
+    "runtime~main.js": "/svg_morph_glitch_effects/static/js/runtime~main.25705fe1.js",
+    "runtime~main.js.map": "/svg_morph_glitch_effects/static/js/runtime~main.25705fe1.js.map",
+    "static/js/2.9b29738c.chunk.js": "/svg_morph_glitch_effects/static/js/2.9b29738c.chunk.js",
+    "static/js/2.9b29738c.chunk.js.map": "/svg_morph_glitch_effects/static/js/2.9b29738c.chunk.js.map",
+    "index.html": "/svg_morph_glitch_effects/index.html",
+    "precache-manifest.d0fa240805d511fa8d8ad3de2988d6c8.js": "/svg_morph_glitch_effects/precache-manifest.d0fa240805d511fa8d8ad3de2988d6c8.js",
+    "service-worker.js": "/svg_morph_glitch_effects/service-worker.js",
+    "static/css/main.e3c6ce57.chunk.css.map": "/svg_morph_glitch_effects/static/css/main.e3c6ce57.chunk.css.map"
   }
 }
