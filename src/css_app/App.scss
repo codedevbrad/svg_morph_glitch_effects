@@ -1,0 +1,30 @@
+@import "./variables.scss";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+
+// font-family: 'Montserrat', sans-serif;
+
+* { -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4, a, li, p, input, label, textarea, button {
+  font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.87em; letter-spacing: 0em;
+}
+
+
+input , button { font-weight: 400; }
+
+/* -- html content -- */
+
+html, body { padding: 0; margin: 0;  width: 100%; background: white; }
+
+html    { height: 100%; display: block; overflow: auto;  }
+
+a       { text-decoration: none; cursor: pointer; }
+a:hover { text-decoration: none; }
+svg     { pointer-events:  none; }
+
+.App , #root , .main { background: $primary_background; width: 100%; height: 100%; color: white; }
+
+
+::-webkit-scrollbar       { width: 15px; }
+::-webkit-scrollbar-track { background: #040414; }
+::-webkit-scrollbar-thumb { background: #460606; border: 3px solid #040414; cursor: pointer; }

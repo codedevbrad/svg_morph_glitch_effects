@@ -1,0 +1,35 @@
+@import "../css_app/variables.scss";
+
+.App .main {
+    width: 100%; height: 100%; background: $primary_background;  display: block;
+
+  .squares_container {
+
+        width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center;
+        justify-content: center;  background: $primary_background;
+
+        .squares_individual {
+
+             width: 60%; height: 70%; padding: 50px; position: relative; display: flex;
+             align-items: center; justify-content: center;
+
+             > img { width: auto; height: 100%; transition: all 300ms; }
+             > h2  { font-size: 4em; position: relative; padding: 20px; right: 80px;  cursor: pointer; }
+             > h2:hover { color: blue; }
+        }
+    }
+}
+
+#morphing_element {
+    position: fixed; z-index: 0; left: 40px; right: 0; margin: auto; top: 10px; display: block;
+    overflow: visible; animation: bubble 15s infinite;
+}
+
+@keyframes bubble {
+    25%  { left: 120px; top: 0;      transform: rotate(05deg); }
+    50%  { left: 70px;  top: -35px;  transform: rotate(15deg); }
+    100% { left: 40px;  top: 10px;   transform: rotate(00deg); }
+}
+
+.image_canvas_contain { width: 100%; height: 100%; }
+.image_canvas { width: auto; height: 100%; transition: all 300ms; }
