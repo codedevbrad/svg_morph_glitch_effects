@@ -30,7 +30,7 @@ const ImageCanvas = ( props ) => {
   }, []);
 
   return (
-      <ReactMovement class="image_canvas_contain">
+      <ReactMovement class={"image_canvas_contain"}>
           <canvas className="image_canvas" id={ 'canvas-' + props.id }> </canvas>
       </ReactMovement>
    )
@@ -52,19 +52,28 @@ const ExploreMore = (  props ) => {
 
 const MorphSquares = ( ) => {
 
-      const renderExplore = ( explore ) => {
-        console.log( explore );
+      const renderExplore = ( element ) => {
+
       }
 
       return (
          <Fragment>
               { elements.map( ( element , index ) =>
                <div key={ index } className="squares_container">
+                    <div className="square_first">
+                       <div key={ index } className="squares_individual">
+                            <ImageCanvas key={ index } id={ index } image={ element.elementImg }/>
+                            <h2 onClick={ e => renderExplore( e ) }> { element.title } </h2>
+                       </div>
+                    </div>
 
-                   <div key={ index } className="squares_individual">
-                        <ImageCanvas key={ index } id={ index } image={ element.elementImg }/>
-                        <h2 onClick={ e => renderExplore( index ) }> { element.title } </h2>
-                   </div>
+                    <div className="square_second" id={ `square1-` + index }>
+
+                    </div>
+
+                    <div className="square_third" id={ `square2-` + index }>
+
+                    </div>
                </div>
              )}
          </Fragment>
@@ -120,31 +129,32 @@ const MainApp = ( ) => {
      var handleScroll = ( arr ) => {
           // add positions to array once.
           var scrollY = Math.round( window.pageYOffset );
+          var lastEl = null;
 
-          if ( positions.length == 0 ) {
+
+           // if this element is same as last element , ignore the forEach loop.
+
+           // do not trigger if last element is set. because array of positons   will be set.
+           if ( positions.length == 0 ) {
               var each = document.getElementsByClassName('squares_individual');
               Array.from( each ).forEach( ( el ) => positions.push( { element : el.parentNode , newElement: true } ));
           }
 
-          if ( scrollY == positions[0].element.offsetTop ) {
-              resetNew();
-              positions[0].newElement = false;
-              svgAnimate( elements[0].morph );
-          }
-          if ( scrollY >= ( positions[1].element.offsetTop - 50 ) && scrollY < ( positions[2].element.offsetTop - 50 ) && positions[1].newElement ) {
-              resetNew();
-              positions[1].newElement = false;
-              svgAnimate( elements[1].morph );
-          }
-          if ( scrollY >= ( positions[2].element.offsetTop -50 ) && scrollY < ( positions[3].element.offsetTop - 50 ) && positions[2].newElement ) {
-              resetNew();
-              positions[2].newElement = false;
-              svgAnimate( elements[2].morph );
-          }
-          if ( scrollY == positions[3].element.offsetTop ) {
-              resetNew();
-              positions[3].newElement = false;
-              svgAnimate( elements[3].morph );
+          if ( scrollY == positions[ positions.length - 1 ].element.offsetTop ) {
+               resetNew();
+               positions[ positions.length - 1 ].newElement = false;
+               svgAnimate( elements[ positions.length - 1 ].morph );
+
+          } else {
+            positions.forEach( ( each , position ) => {
+                // on each scroll, we looop through array to find elements
+                if ( scrollY >= each.element.offsetTop && scrollY < positions[ position + 1 ].element.offsetTop && each.newElement ) {
+                    console.log( each.element );
+                    resetNew();
+                    positions[ position ].newElement = false;
+                    svgAnimate( elements[ position ].morph );
+                }
+            });
           }
      }
 
